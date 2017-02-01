@@ -1,0 +1,20 @@
+{
+    "name": "spec",
+    "description": "Container Volumes ports",
+    "chef_type": "environment",
+    "json_class": "Chef::Environment",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    "Replication": {
+          "selector_key": "app",
+          "selector_value": "nginx",
+          "template_name": "nginx",
+          "template_key": "app",
+          "template_value": "nginx",
+          "spec_name": "nginx",
+          "spec_image": "nginx",
+          "spec_containerPort": "80"
+        }
+    }
+}

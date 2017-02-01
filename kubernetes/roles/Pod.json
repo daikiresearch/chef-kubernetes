@@ -1,0 +1,21 @@
+{
+    "name": "role",
+    "description": "metadata spec(Pod,Container use)",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      "metadata": {
+        "name": "nginx-pod",
+        "label_key": "app",
+        "label_value": "MyApp"
+      },
+      "containers_1": {
+        "name": "nginx-container",
+        "image": "nginx"
+      },
+      "containers_2": {
+        "name": "",
+        "image": ""
+      }
+    }
+}

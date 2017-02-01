@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: "ReplicationController" # kindをReplicationControllerに
+metadata:
+  name: "webserver-controller"
+spec:
+  replicas: 1  # レプリカ数の定義
+  selector:    # どのPodを監視対象にするかの設定
+    app: "webserver"  # labelにpetshop があるやつ
+  template:
+    spec:
+      containers:
+      - name: "apache-frontend"
+        image: "webwithdb"
+        ports:
+        - containerPort: 80
+    metadata:
+      labels:
+        name: "webserver"
+        uses: db
+  labels:
+    name: "webserver"

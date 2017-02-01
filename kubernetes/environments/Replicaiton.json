@@ -1,0 +1,20 @@
+{
+    "name": "environment",
+    "description": "(Container Volumes ports)",
+    "chef_type": "environment",
+    "json_class": "Chef::Environment",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    "spec": {
+      "replicas": "3",
+      "spec": {
+        "container": {
+            "ports": {
+              "containerPort": "80"
+            }
+        }
+      }
+    }
+  }
+}

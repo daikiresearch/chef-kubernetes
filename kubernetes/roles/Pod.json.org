@@ -1,0 +1,27 @@
+{
+    "name": "metadata",
+    "description": "metadata description",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "run_list": [
+      "recipe[Pod]"
+    ],
+    "default_attributes": {
+    },
+    "override_attributes": {
+      "metadata": {
+        "name": "httpd",
+        "label_key": "app",
+        "label_value": "MyApp"
+      },
+      "containers_1": {
+        "name": "httpd",
+        "image": "httpd"
+      },
+      "containers_2": {
+        "name": "",
+        "image": "django"
+      }
+
+    }
+}

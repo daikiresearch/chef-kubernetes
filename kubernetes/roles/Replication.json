@@ -1,0 +1,37 @@
+{
+    "name": "role",
+    "description": "metadata spec(Pod,Container use)",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "run_list": [
+      "recipe[Replication]"
+    ],
+    "default_attributes": {
+    },
+    "override_attributes": {
+      "metadata": {
+          "name": "nginx"
+      },
+      "spec": {
+        "selector": {
+            "key": "app",
+            "value": "nginx"
+        },
+        "template": {
+          "metadata": {
+              "name": "nginx",
+                "labels": {
+                  "key": "app",
+                  "value": "nginx"
+                }
+          }
+        },
+        "spec": {
+          "container": {
+            "name": "nginx",
+            "image": "nginx"
+          }
+        }
+    }
+  }
+}

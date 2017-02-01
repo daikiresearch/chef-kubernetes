@@ -1,0 +1,16 @@
+{
+    "name": "spec",
+    "description": "Container Volumes ports",
+    "chef_type": "environment",
+    "json_class": "Chef::Environment",
+    "default_attributes": {
+      "spec": {
+        "ports": {
+                "protocol": "",
+                "port": 80,
+                "targetPort": "",
+                "NodePort": 30000
+            }
+        }
+    }
+}

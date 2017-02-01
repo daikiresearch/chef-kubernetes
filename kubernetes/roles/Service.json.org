@@ -1,0 +1,22 @@
+{
+    "name": "metadata",
+    "description": "metadata description",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "run_list": [
+      "recipe[Service]"
+    ],
+    "default_attributes": {
+    },
+    "override_attributes": {
+      "metadata": {
+        "name": "my-service"
+      },
+      "spec": {
+        "selector": {
+            "key": "app",
+            "value": "MyApp"
+          }
+    }
+}
+}

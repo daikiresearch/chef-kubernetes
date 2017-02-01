@@ -1,0 +1,24 @@
+apiVersion: <%= @apiVersion %>
+kind: <%= @kind %>
+metadata:
+  name: <%= @name %>
+  labels:
+    <%= @label_key %>: <%= @label_value %>
+spec:
+    <% if @container_name_1 != "" then %>
+  containers:
+  - name: <%= @container_name_1 %>
+    image: <%= @container_image_1 %>
+    ports:
+    - containerPort: <%= @container_port_1 %>
+    <% end %>
+    <% if @container_name_2 != "" then %>
+  - name: <%= @container_name_2 %>
+    image: <%= @container_image_2 %>
+    ports:
+    - containerPort: <%= @container_port_2 %>
+    <% end %>
+    <% if @status_phase != "" then %>
+status:
+  phase: <%= @status_phase %>
+    <% end %>
