@@ -1,0 +1,11 @@
+{
+  "chef_environment": "Service",
+    "Service": {
+      "apiVersion": "v1",
+      "kind": "Service"
+    },
+  "run_list": [
+    "role[Service]",
+    "recipe[Service]"
+  ]
+}

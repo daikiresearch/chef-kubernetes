@@ -1,0 +1,13 @@
+{
+    "name": "hello",
+    "description": "all",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+      "hello": {
+        "next": "all"
+      }
+    }
+}

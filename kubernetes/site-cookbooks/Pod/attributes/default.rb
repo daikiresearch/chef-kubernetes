@@ -1,0 +1,1 @@
+default['status']['phase']="newPod"

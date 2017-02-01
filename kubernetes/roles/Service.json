@@ -1,0 +1,22 @@
+{
+    "name": "metadata",
+    "description": "metadata description",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      "metadata": {
+        "labels": {
+            "key": "app",
+            "value": "Myapp"
+        },
+        "name": "nginx-service"
+      },
+      "spec": {
+        "type": "NodePort",
+        "selector": {
+            "key": "app",
+            "value": "MyApp"
+          }
+    }
+}
+}

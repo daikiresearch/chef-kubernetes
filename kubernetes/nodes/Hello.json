@@ -1,0 +1,10 @@
+{
+  "chef_environment": "Hello",
+  "Hello": {
+      "start": "Hello"
+  },
+  "run_list": [
+    "recipe[hello]",
+    "role[hello]"
+  ]
+}

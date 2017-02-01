@@ -1,0 +1,21 @@
+apiVersion: <%= @apiVersion %>
+kind: <%= @kind %>
+metadata:
+  name: <%= @name %>
+  labels:
+    <%= @label_key %>: <%= @label_value %>
+spec:
+  type: <%= @spec_type %>
+  selector:
+    <%= @spec_selector_key %>: <%= @spec_selector_value %>
+  ports:
+  - <% if @spec_ports_protocol  != "" then %>protocol: <%= @spec_ports_protocol %><% end %>
+    port: <%= @spec_ports_port %>
+    <% if @spec_ports_targetPort  != "" then %>targetPort: <%= @spec_ports_targetPort %><% end %>
+    nodePort: <%= @spec_ports_NodePort %>
+    <% if @status_loadBalancer_ip == "" then %>
+status:
+  loadBalancer:
+  - ingress:
+    - ip: <%= @status_loadBalancer_ip %>
+    <% end %>

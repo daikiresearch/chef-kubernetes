@@ -1,0 +1,15 @@
+{
+  "chef_environment": "Pod",
+    "Pod": {
+      "apiVersion": "v1",
+      "kind": "Pod"
+    },
+    "Replication": {
+      "apiVersion": "v1",
+      "kind": "ReplicaitonController"
+    },
+  "run_list": [
+    "role[Pod]",
+    "role[Replication]"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "chef_environment": "Replicaiton",
+    "Replication": {
+      "apiVersion": "v1",
+      "kind": "ReplicationController",
+    },
+  "run_list": [
+    "recipe[Replication]",
+    "role[Replication]"
+  ]
+}

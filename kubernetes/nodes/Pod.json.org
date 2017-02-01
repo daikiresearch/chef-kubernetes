@@ -1,0 +1,10 @@
+{
+  "chef_environment": "Pod",
+    "Pod": {
+      "apiVersion": "v1",
+      "kind": "Pod"
+    },
+  "run_list": [
+    "role[Pod]"
+  ]
+}
